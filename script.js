@@ -1,11 +1,11 @@
 
 
 
-const cars = ["SUZUKI", "DACIA", "SUBARU", "ASTONMARTIN", "SMART", "TESLA", "BUGATTI", "SAAB", "ROLLSROYCE", "CITROEN", "RAM", "PORSCHE", "TOYOTA", "PONTIAC", "FERRARI", "NISSAN", "MITSUBISHI", "HUMMER", "MINI", "MERCEDESBENZ", "VOLKSWAGEN", "MAZDA", "ISUZU", "MASERATI", "LOTUS", "OPEL", "LEXUS", "SEAT", "LANDROVER", "ACURA", "KIA", "JEEP", "KOENIGSEGG", "JAGUAR", "INFINITI", "HYUNDAI", "LAMBORGHINI", "HONDA", "MCLAREN", "FORD", "PAGANI", "FIAT", "DODGE", "CHRYSLER", "PEUGEOT", "CHEVROLET", "LANCIA", "CADILLAC", "VOLVO", "SKODA", "BMW", "RENAULT", "BENTLEY", "AUDI", "ALFAROMEO"]
+const cars = ["SUZUKI", "DACIA", "SUBARU", "ASTON MARTIN", "SMART", "TESLA", "BUGATTI", "SAAB", "ROLLS ROYCE", "CITROEN", "RAM", "PORSCHE", "TOYOTA", "PONTIAC", "FERRARI", "NISSAN", "MITSUBISHI", "HUMMER", "MINI", "MERCEDES BENZ", "VOLKSWAGEN", "MAZDA", "ISUZU", "MASERATI", "LOTUS", "OPEL", "LEXUS", "SEAT", "LAND ROVER", "ACURA", "KIA", "JEEP", "KOENIGSEGG", "JAGUAR", "INFINITI", "HYUNDAI", "LAMBORGHINI", "HONDA", "MCLAREN", "FORD", "PAGANI", "FIAT", "DODGE", "CHRYSLER", "PEUGEOT", "CHEVROLET", "LANCIA", "CADILLAC", "VOLVO", "SKODA", "BMW", "RENAULT", "BENTLEY", "AUDI", "ALFA ROMEO"]
 let lives = 8;
 let car;
 function pickCar(array) {
-   return array[Math.floor(Math.random() * cars.length - 1)];
+   return array[Math.floor(Math.random() * cars.length)];
 }
 
 
@@ -37,8 +37,13 @@ function loadWord() {
    charsDiv.innerHTML = '';
    carToChar.forEach((char, index) => {
       let charElem = document.createElement("p");
-      charElem.classList.add('letter')
-      charElem.textContent = char;
+      if(char == " "){
+         charElem.classList.add('dash');
+         charElem.textContent = "-";
+      }else {
+         charElem.classList.add('letter')
+         charElem.textContent = char;
+      }
       charsDiv.appendChild(charElem)
    })
 }
@@ -126,4 +131,3 @@ function updateLives() {
    document.querySelector('.lives').innerHTML = `Lives: ${lives}`
 }
 
-// // testing

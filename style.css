@@ -130,11 +130,7 @@ body p {
 
 }
 
-#sicak {
-   position: absolute;
-   width: 80px;
-   height: 80px;
-   top: 10%;
-   left: 48%;
-   
+.dash {
+   margin-left: 15px;
+   margin-right: 5px;
 }
