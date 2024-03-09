@@ -31,7 +31,7 @@ document.querySelector('.start-game')
 
 
 function loadWord() {
-   lives = 8;
+   // "AUDI" => ["A", "U", "D", "I"]
    let carToChar = car.split('');
    const charsDiv = document.querySelector('.chars');
    charsDiv.innerHTML = '';
@@ -51,8 +51,8 @@ function loadWord() {
 let guessedLetters = []
 function loadAlphabet(){
    const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-   const alphabetDiv = document.querySelector('.alphabet')
-   alphabetDiv.innerHTML = ''
+   const alphabetDiv = document.querySelector('.alphabet');
+   alphabetDiv.innerHTML = '';
    alphabet.forEach(letter => {
       let letterElem = document.createElement("button");
       letterElem.classList.add('alphabet-letter')
