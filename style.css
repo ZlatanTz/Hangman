@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+:root {
+   --background: 
+}
+
 body {
+   background: url("/projects/Hangman/Hangmanlogo.png"),  rgb(84, 84, 252);
+   background-size: 7.05%;
+   background-position: center;
+   background-repeat: repeat;
    font-family: "Poppins", sans-serif;
    margin: 0;
-   background-color: rgb(84, 84, 252);
    color: white;
 }
+
 body p {
    margin: 0;
 }
-
 .wrapper {
    display: flex;
    height: 100vh;
@@ -37,7 +44,29 @@ body p {
    border-radius: 30px;
    
 }
+.version-pick {
+   display: flex;
+   width: 20%;
+   height: 3%;
+}
 
+.button {
+   cursor: pointer;
+   color: white;
+   font-family: "Poppins";
+   background-color: rgb(84, 84, 252);
+   border: 0;
+   border-radius: 10px;
+   margin-left: 4px;
+   width: 50%;
+   height: 100%;
+   box-shadow: 0px 6px 5px rgb(42, 39, 39);
+
+}
+.is-toggled {
+   color: rgb(84, 84, 252);
+   background-color: white;
+}
 .game-title {
    font-size: 4em;
    margin-bottom: 50px;
@@ -64,10 +93,10 @@ body p {
 }
 
 .critical {
-   color: red; 
+   color: red;  
 }
 
-.start-game:hover {
+button:hover {
    transform: scale(1.05);
    transition-duration: 0.5s;
 }
